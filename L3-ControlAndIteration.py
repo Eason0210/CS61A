@@ -69,3 +69,8 @@ def positive(x):
 def inverse(f):
     """Return g(y) such that g(f(x)) -> x."""
     return lambda y: search(lambda x: f(x) == y)
+
+# Conditional Expressions
+# <consequent> if <predicate> else <alternative>
+x = 0
+abs(1/x if x !=0 else 0)
