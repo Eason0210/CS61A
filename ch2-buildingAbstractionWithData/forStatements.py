@@ -30,8 +30,21 @@ def count(s, value):
 # sequence unpacking in For statements
 pairs = [[1, 2], [2, 2], [3, 2], [4, 4]]
 
-same_count = 0
-for x, y in pairs:
-    if x == y:
-        same_count += 1
-print (same_count)
+def same_count(pairs):
+    """Count the pairs that have the same elements in the list PAIRS"""
+    count = 0
+    for x, y in pairs:
+        if x == y:
+            count += 1
+    return count
+
+# ranges
+def sum_below(n):
+    total = 0
+    for i in range(n):
+        total += i
+    return total
+
+def cheer():
+    for _ in range(3):
+        print('Go Bears!')
