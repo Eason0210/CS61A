@@ -12,6 +12,7 @@ class Account:
     >>> a.balance
     10
     """
+    interest = 0.02 # A class attribute
 
     def __init__(self, account_holder):
         self.balance = 0
