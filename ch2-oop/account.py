@@ -16,6 +16,17 @@ class Account:
     >>> Account.interest = 0.04
     >>> a.interest
     0.04
+
+    >>> a = Account('John')
+    >>> b = CheckingAccount('Jack')
+    >>> a.deposit(100)
+    100
+    >>> b.deposit(100)
+    100
+    >>> a.withdraw(10)
+    90
+    >>> b.withdraw(10)
+    89
     """
     interest = 0.02 # A class attribute
 
@@ -34,3 +45,9 @@ class Account:
             return 'Insufficient funds'
         self.balance = self.balance - amount
         return self.balance
+
+class CheckingAccount(Account):
+    interest = 0.01
+    withdraw_fee = 1
+    def withdraw(self, amount):
+        return Account.withdraw(self, amount + self.withdraw_fee)
