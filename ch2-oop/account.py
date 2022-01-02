@@ -47,6 +47,7 @@ class Account:
         return self.balance
 
 class CheckingAccount(Account):
+    """A back account that charges for withdrawals."""
     interest = 0.01
     withdraw_fee = 1
     def withdraw(self, amount):
