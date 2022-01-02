@@ -29,7 +29,6 @@ class CheckingAccount(Account):
     def withdraw(self, amount):
         return Account.withdraw(self, amount + self.withdraw_fee)
 
-# FIXME: TypeError: 'list' object is not callable
 class Bank:
     """A bank *has* accounts.
 
@@ -56,7 +55,7 @@ class Bank:
         self.accounts.append(account)
         return account
 
-    def pay_interest():
+    def pay_interest(self):
         for a in self.accounts:
             a.deposit(a.balance * a.interest)
 
