@@ -11,6 +11,11 @@ class Account:
     'Insufficient funds'
     >>> a.balance
     10
+    >>> a.interest
+    0.02
+    >>> Account.interest = 0.04
+    >>> a.interest
+    0.04
     """
     interest = 0.02 # A class attribute
 
